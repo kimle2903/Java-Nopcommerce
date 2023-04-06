@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="tests" name="Nopcommerce" thread-count="1">
 
-	<!-- 
-
-		<listener class-name="reportConfigs.MethodListener" />
--->
 	<listeners>
 		<listener class-name="reportConfigs.ExtentTestListener" />
+		<listener class-name="reportConfigs.MethodListener" />
 		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
-
 	</listeners>
 
 	<parameter name="envServer" value="dev" />
@@ -17,7 +13,24 @@
 	<test name="Run with Chrome Browser">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.nopcommerce.user.Register" />
+			<class name="com.nopcommerce.commons.Common_01_Register_With_Email_And_Password" />
+			<class name="com.nopcommerce.user.Login" />
+		</classes>
+	</test>
+
+	<test name="Run with Edge Browser">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="com.nopcommerce.commons.Common_01_Register_With_Email_And_Password" />
+			<class name="com.nopcommerce.user.Login" />
+		</classes>
+	</test>
+
+	<test name="Run with Safari Browser">
+		<parameter name="browser" value="safari" />
+		<classes>
+			<class name="com.nopcommerce.commons.Common_01_Register_With_Email_And_Password" />
+			<class name="com.nopcommerce.user.Login" />
 		</classes>
 	</test>
 

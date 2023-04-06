@@ -96,7 +96,7 @@ public class BaseTest {
 				driver.quit();
 			}
 		} catch (Exception e) {
-			// log.info(e.getMessage());
+			log.info(e.getMessage());
 		} finally {
 			try {
 				Process process = Runtime.getRuntime().exec(cmd);
@@ -125,9 +125,9 @@ public class BaseTest {
 		boolean pass = true;
 		try {
 			Assert.assertTrue(condition);
-			// log.info("------- PASS ---------");
+			log.info("------- PASS ---------");
 		} catch (Throwable e) {
-			// log.info("------- FAIL ---------");
+			log.info("------- FAIL ---------");
 			pass = false;
 			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);
@@ -140,9 +140,9 @@ public class BaseTest {
 		boolean pass = true;
 		try {
 			Assert.assertFalse(condition);
-			// log.info("------- PASS ---------");
+			log.info("------- PASS ---------");
 		} catch (Throwable e) {
-			// log.info("------- FAIL ---------");
+			log.info("------- FAIL ---------");
 			pass = false;
 			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);
@@ -154,9 +154,9 @@ public class BaseTest {
 		boolean pass = true;
 		try {
 			Assert.assertEquals(actual, expected);
-			// log.info("------- PASS ---------");
+			log.info("------- PASS ---------");
 		} catch (Throwable e) {
-			// log.info("------- FAIL ---------");
+			log.info("------- FAIL ---------");
 			pass = false;
 			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);

@@ -10,6 +10,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.nopcommerce.commons.Common_01_Register_With_Email_And_Password;
 
 import commons.BaseTest;
