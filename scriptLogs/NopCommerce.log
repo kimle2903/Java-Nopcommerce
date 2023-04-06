@@ -1,0 +1,243 @@
+[2023-04-06 16:21:35,616] Register - Step 01: Click to register link
+[2023-04-06 16:21:38,661] Register - Step 02: Click to register button
+[2023-04-06 16:21:38,779] Step 03: Verify error message at firstName textbox
+[2023-04-06 16:21:38,845] Step 04: Verify error message at lastName textbox
+[2023-04-06 16:21:38,907] Register - Step 05: Verify error message at email textbox
+[2023-04-06 16:21:38,956] Step 06: Verify error message at password textbox
+[2023-04-06 16:21:39,023] Step 07: Verify error message at confirm password textbox
+[2023-04-06 16:21:39,073] Register - Step 01: Click to register link
+[2023-04-06 16:21:41,510] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:21:41,656] Register - Step 03: Enter to lastName textbox with data is 'le6232 '
+[2023-04-06 16:21:41,798] Register - Step 04: Enter to email invalid textbox with data is '123@3$%%' 
+[2023-04-06 16:21:41,932] Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:21:42,066] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:21:42,196] Register - Step 07: Click to register button
+[2023-04-06 16:21:42,289] Register - Step 08: Verify error message at confirm password textbox
+[2023-04-06 16:21:42,338] Register - Step 01: Click to register link
+[2023-04-06 16:21:44,786] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:21:44,887] Register - Step 03: Enter to lastName textbox with data is 'le6232 '
+[2023-04-06 16:21:45,024] Register - Step 04: Enter to email invalid textbox with data is ' kimle2702@gmail.com'
+[2023-04-06 16:21:45,187] Register - Step 05: Enter to password textbox with data is '123'
+[2023-04-06 16:21:45,297] Register - Step 06: Enter to confirm password textbox with data is '123'
+[2023-04-06 16:21:45,425] Register - Step 07: Click to register button
+[2023-04-06 16:21:45,511] Register - Step 08: Verify error message at confirm password textbox
+[2023-04-06 16:21:45,560] Register - Step 01: Click to register link
+[2023-04-06 16:21:48,043] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:21:48,148] Register - Step 03: Enter to lastName textbox with data is 'le6232 '
+[2023-04-06 16:21:48,283] Register - Step 04: Enter to email invalid textbox with data is ' kimle2702@gmail.com'
+[2023-04-06 16:21:48,452] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:21:48,581] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:21:48,694] Register - Step 07: Click to register button
+[2023-04-06 16:21:49,519] Register - Step 08: Verify register success
+[2023-04-06 16:21:49,589] Register - Step 01: Click to register link
+[2023-04-06 16:21:52,138] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:21:52,276] Register - Step 03: Enter to lastName textbox with data is 'le6232 '
+[2023-04-06 16:21:52,438] Register - Step 04: Enter to email invalid textbox with data is ' kimle2702@gmail.com'
+[2023-04-06 16:21:52,580] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:21:52,698] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:21:52,816] Register - Step 07: Click to register button
+[2023-04-06 16:21:53,299] Register - Step 08: Verify email already exists
+[2023-04-06 16:21:53,353] Register - Step 01: Click to register link
+[2023-04-06 16:21:55,960] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:21:56,063] Register - Step 03: Enter to lastName textbox with data is 'le6232 '
+[2023-04-06 16:21:56,187] Register - Step 04: Enter to email invalid textbox with data is ' kimle2702@gmail.com'
+[2023-04-06 16:21:56,369] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:21:56,493] Register - Step 06: Enter to confirm password textbox with data is '123456'
+[2023-04-06 16:21:56,604] Register - Step 07: Click to register button
+[2023-04-06 16:21:56,692] Register - Step 08: Verify assword and confirmation password don't match
+[2023-04-06 16:23:59,147] Register - Step 01: Click to register link
+[2023-04-06 16:24:02,233] Register - Step 02: Click to register button
+[2023-04-06 16:24:02,342] Step 03: Verify error message at firstName textbox
+[2023-04-06 16:24:02,405] Step 04: Verify error message at lastName textbox
+[2023-04-06 16:24:02,453] Register - Step 05: Verify error message at email textbox
+[2023-04-06 16:24:02,530] Step 06: Verify error message at password textbox
+[2023-04-06 16:24:02,575] Step 07: Verify error message at confirm password textbox
+[2023-04-06 16:24:02,631] Register - Step 01: Click to register link
+[2023-04-06 16:24:05,181] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:24:05,325] Register - Step 03: Enter to lastName textbox with data is 'le8921 '
+[2023-04-06 16:24:05,469] Register - Step 04: Enter to email invalid textbox with data is '123@3$%%' 
+[2023-04-06 16:24:05,607] Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:24:05,762] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:24:05,902] Register - Step 07: Click to register button
+[2023-04-06 16:24:05,996] Register - Step 08: Verify error message at confirm password textbox
+[2023-04-06 16:24:06,052] Register - Step 01: Click to register link
+[2023-04-06 16:24:08,537] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:24:08,660] Register - Step 03: Enter to lastName textbox with data is 'le8921 '
+[2023-04-06 16:24:08,795] Register - Step 04: Enter to email invalid textbox with data is ' kimle271@gmail.com'
+[2023-04-06 16:24:08,955] Register - Step 05: Enter to password textbox with data is '123'
+[2023-04-06 16:24:09,072] Register - Step 06: Enter to confirm password textbox with data is '123'
+[2023-04-06 16:24:09,198] Register - Step 07: Click to register button
+[2023-04-06 16:24:09,289] Register - Step 08: Verify error message at confirm password textbox
+[2023-04-06 16:24:09,335] Register - Step 01: Click to register link
+[2023-04-06 16:24:11,799] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:24:11,904] Register - Step 03: Enter to lastName textbox with data is 'le8921 '
+[2023-04-06 16:24:12,039] Register - Step 04: Enter to email invalid textbox with data is ' kimle271@gmail.com'
+[2023-04-06 16:24:12,183] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:24:12,301] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:24:12,428] Register - Step 07: Click to register button
+[2023-04-06 16:24:13,282] Register - Step 08: Verify register success
+[2023-04-06 16:24:13,335] Register - Step 01: Click to register link
+[2023-04-06 16:24:15,798] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:24:15,938] Register - Step 03: Enter to lastName textbox with data is 'le8921 '
+[2023-04-06 16:24:16,095] Register - Step 04: Enter to email invalid textbox with data is ' kimle271@gmail.com'
+[2023-04-06 16:24:16,291] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:24:16,445] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:24:16,593] Register - Step 07: Click to register button
+[2023-04-06 16:24:17,126] Register - Step 08: Verify email already exists
+[2023-04-06 16:24:17,194] Register - Step 01: Click to register link
+[2023-04-06 16:24:19,699] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:24:19,825] Register - Step 03: Enter to lastName textbox with data is 'le8921 '
+[2023-04-06 16:24:19,961] Register - Step 04: Enter to email invalid textbox with data is ' kimle271@gmail.com'
+[2023-04-06 16:24:20,106] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:24:20,223] Register - Step 06: Enter to confirm password textbox with data is '123456'
+[2023-04-06 16:24:20,351] Register - Step 07: Click to register button
+[2023-04-06 16:24:20,431] Register - Step 08: Verify assword and confirmation password don't match
+[2023-04-06 16:33:04,794] Register - Step 01: Click to register link
+[2023-04-06 16:33:07,812] Register - Step 02: Click to register button
+[2023-04-06 16:33:07,946] Step 03: Verify error message at firstName textbox
+[2023-04-06 16:33:08,013] Step 04: Verify error message at lastName textbox
+[2023-04-06 16:33:08,070] Register - Step 05: Verify error message at email textbox
+[2023-04-06 16:33:08,139] Step 06: Verify error message at password textbox
+[2023-04-06 16:33:08,201] Step 07: Verify error message at confirm password textbox
+[2023-04-06 16:35:49,599] Register - Step 01: Click to register link
+[2023-04-06 16:35:52,682] Register - Step 02: Click to register button
+[2023-04-06 16:35:52,794] Step 03: Verify error message at firstName textbox
+[2023-04-06 16:35:52,867] Step 04: Verify error message at lastName textbox
+[2023-04-06 16:35:52,930] Register - Step 05: Verify error message at email textbox
+[2023-04-06 16:35:53,007] Step 06: Verify error message at password textbox
+[2023-04-06 16:35:53,060] Step 07: Verify error message at confirm password textbox
+[2023-04-06 16:35:53,117] Register - Step 01: Click to register link
+[2023-04-06 16:35:56,133] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:35:56,274] Register - Step 03: Enter to lastName textbox with data is 'le4991 '
+[2023-04-06 16:35:56,418] Register - Step 04: Enter to email invalid textbox with data is '123@3$%%' 
+[2023-04-06 16:35:56,567] Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:35:56,704] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:35:56,834] Register - Step 07: Click to register button
+[2023-04-06 16:35:56,921] Register - Step 08: Verify error message at confirm password textbox
+[2023-04-06 16:35:56,970] Register - Step 01: Click to register link
+[2023-04-06 16:35:59,913] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:36:00,050] Register - Step 03: Enter to lastName textbox with data is 'le4991 '
+[2023-04-06 16:36:00,184] Register - Step 04: Enter to email invalid textbox with data is ' kimle8679@gmail.com'
+[2023-04-06 16:36:00,323] Register - Step 05: Enter to password textbox with data is '123'
+[2023-04-06 16:36:00,425] Register - Step 06: Enter to confirm password textbox with data is '123'
+[2023-04-06 16:36:00,549] Register - Step 07: Click to register button
+[2023-04-06 16:36:00,635] Register - Step 08: Verify error message at confirm password textbox
+[2023-04-06 16:36:00,684] Register - Step 01: Click to register link
+[2023-04-06 16:36:03,714] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:36:03,839] Register - Step 03: Enter to lastName textbox with data is 'le4991 '
+[2023-04-06 16:36:03,968] Register - Step 04: Enter to email invalid textbox with data is ' kimle8679@gmail.com'
+[2023-04-06 16:36:04,106] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:36:04,233] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:36:04,340] Register - Step 07: Click to register button
+[2023-04-06 16:36:05,165] Register - Step 08: Verify register success
+[2023-04-06 16:36:05,219] Register - Step 01: Click to register link
+[2023-04-06 16:36:07,687] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:36:07,827] Register - Step 03: Enter to lastName textbox with data is 'le4991 '
+[2023-04-06 16:36:08,002] Register - Step 04: Enter to email invalid textbox with data is ' kimle8679@gmail.com'
+[2023-04-06 16:36:08,209] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:36:08,377] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:36:08,567] Register - Step 07: Click to register button
+[2023-04-06 16:36:09,062] Register - Step 08: Verify email already exists
+[2023-04-06 16:36:09,124] Register - Step 01: Click to register link
+[2023-04-06 16:36:11,576] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:36:11,676] Register - Step 03: Enter to lastName textbox with data is 'le4991 '
+[2023-04-06 16:36:11,820] Register - Step 04: Enter to email invalid textbox with data is ' kimle8679@gmail.com'
+[2023-04-06 16:36:11,955] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:36:12,072] Register - Step 06: Enter to confirm password textbox with data is '123456'
+[2023-04-06 16:36:12,188] Register - Step 07: Click to register button
+[2023-04-06 16:36:12,274] Register - Step 08: Verify assword and confirmation password don't match
+[2023-04-06 16:38:00,830] Register - Step 01: Click to register link
+[2023-04-06 16:38:03,864] Register - Step 02: Click to register button
+[2023-04-06 16:38:03,980] Step 03: Verify error message at firstName textbox
+[2023-04-06 16:38:04,054] Step 04: Verify error message at lastName textbox
+[2023-04-06 16:38:04,111] Register - Step 05: Verify error message at email textbox
+[2023-04-06 16:38:04,164] Step 06: Verify error message at password textbox
+[2023-04-06 16:38:04,220] Step 07: Verify error message at confirm password textbox
+[2023-04-06 16:38:04,276] Register - Step 01: Click to register link
+[2023-04-06 16:38:06,776] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:38:06,918] Register - Step 03: Enter to lastName textbox with data is 'le2128 '
+[2023-04-06 16:38:07,042] Register - Step 04: Enter to email invalid textbox with data is '123@3$%%' 
+[2023-04-06 16:38:07,179] Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:38:07,308] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:38:07,444] Register - Step 07: Click to register button
+[2023-04-06 16:38:07,533] Register - Step 08: Verify error message at confirm password textbox
+[2023-04-06 16:38:07,590] Register - Step 01: Click to register link
+[2023-04-06 16:38:10,051] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:38:10,176] Register - Step 03: Enter to lastName textbox with data is 'le2128 '
+[2023-04-06 16:38:10,304] Register - Step 04: Enter to email invalid textbox with data is ' kimle2670@gmail.com'
+[2023-04-06 16:38:10,454] Register - Step 05: Enter to password textbox with data is '123'
+[2023-04-06 16:38:10,572] Register - Step 06: Enter to confirm password textbox with data is '123'
+[2023-04-06 16:38:10,693] Register - Step 07: Click to register button
+[2023-04-06 16:38:10,784] Register - Step 08: Verify error message at confirm password textbox
+[2023-04-06 16:38:10,833] Register - Step 01: Click to register link
+[2023-04-06 16:38:13,326] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:38:13,433] Register - Step 03: Enter to lastName textbox with data is 'le2128 '
+[2023-04-06 16:38:13,569] Register - Step 04: Enter to email invalid textbox with data is ' kimle2670@gmail.com'
+[2023-04-06 16:38:13,721] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:38:13,848] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:38:13,967] Register - Step 07: Click to register button
+[2023-04-06 16:38:14,697] Register - Step 08: Verify register success
+[2023-04-06 16:38:14,749] Register - Step 01: Click to register link
+[2023-04-06 16:38:17,189] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:38:17,327] Register - Step 03: Enter to lastName textbox with data is 'le2128 '
+[2023-04-06 16:38:17,515] Register - Step 04: Enter to email invalid textbox with data is ' kimle2670@gmail.com'
+[2023-04-06 16:38:17,746] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:38:17,937] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:38:18,090] Register - Step 07: Click to register button
+[2023-04-06 16:38:18,801] Register - Step 08: Verify email already exists
+[2023-04-06 16:38:18,877] Register - Step 01: Click to register link
+[2023-04-06 16:38:21,425] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:38:21,530] Register - Step 03: Enter to lastName textbox with data is 'le2128 '
+[2023-04-06 16:38:21,664] Register - Step 04: Enter to email invalid textbox with data is ' kimle2670@gmail.com'
+[2023-04-06 16:38:21,815] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:38:21,940] Register - Step 06: Enter to confirm password textbox with data is '123456'
+[2023-04-06 16:38:22,057] Register - Step 07: Click to register button
+[2023-04-06 16:38:22,141] Register - Step 08: Verify assword and confirmation password don't match
+[2023-04-06 16:39:15,509] Register - Step 01: Click to register link
+[2023-04-06 16:39:39,644] Register - Step 01: Click to register link
+[2023-04-06 16:39:42,785] Register - Step 02: Click to register button
+[2023-04-06 16:39:42,935] Step 03: Verify error message at firstName textbox
+[2023-04-06 16:39:43,015] Step 04: Verify error message at lastName textbox
+[2023-04-06 16:39:43,069] Register - Step 05: Verify error message at email textbox
+[2023-04-06 16:39:43,135] Step 06: Verify error message at password textbox
+[2023-04-06 16:39:43,217] Step 07: Verify error message at confirm password textbox
+[2023-04-06 16:39:43,306] Register - Step 01: Click to register link
+[2023-04-06 16:39:45,842] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:39:45,982] Register - Step 03: Enter to lastName textbox with data is 'le9688 '
+[2023-04-06 16:39:46,118] Register - Step 04: Enter to email invalid textbox with data is '123@3$%%' 
+[2023-04-06 16:39:46,254] Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:39:46,393] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:39:46,530] Register - Step 07: Click to register button
+[2023-04-06 16:39:46,615] Register - Step 08: Verify error message at confirm password textbox
+[2023-04-06 16:39:46,668] Register - Step 01: Click to register link
+[2023-04-06 16:39:49,175] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:39:49,294] Register - Step 03: Enter to lastName textbox with data is 'le9688 '
+[2023-04-06 16:39:49,435] Register - Step 04: Enter to email invalid textbox with data is ' kimle6177@gmail.com'
+[2023-04-06 16:39:49,598] Register - Step 05: Enter to password textbox with data is '123'
+[2023-04-06 16:39:49,703] Register - Step 06: Enter to confirm password textbox with data is '123'
+[2023-04-06 16:39:49,826] Register - Step 07: Click to register button
+[2023-04-06 16:39:49,914] Register - Step 08: Verify error message at confirm password textbox
+[2023-04-06 16:39:49,963] Register - Step 01: Click to register link
+[2023-04-06 16:39:52,444] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:39:52,572] Register - Step 03: Enter to lastName textbox with data is 'le9688 '
+[2023-04-06 16:39:52,703] Register - Step 04: Enter to email invalid textbox with data is ' kimle6177@gmail.com'
+[2023-04-06 16:39:52,858] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:39:52,977] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:39:53,094] Register - Step 07: Click to register button
+[2023-04-06 16:39:54,008] Register - Step 08: Verify register success
+[2023-04-06 16:39:54,066] Register - Step 01: Click to register link
+[2023-04-06 16:39:56,515] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:39:56,793] Register - Step 03: Enter to lastName textbox with data is 'le9688 '
+[2023-04-06 16:39:57,070] Register - Step 04: Enter to email invalid textbox with data is ' kimle6177@gmail.com'
+[2023-04-06 16:39:57,331] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:39:57,647] Register - Step 06: Enter to confirm password textbox with data is '123123 '
+[2023-04-06 16:39:57,785] Register - Step 07: Click to register button
+[2023-04-06 16:39:58,257] Register - Step 08: Verify email already exists
+[2023-04-06 16:39:58,317] Register - Step 01: Click to register link
+[2023-04-06 16:40:00,760] Register - Step 02: Enter to firstName textbox with data is 'kim '
+[2023-04-06 16:40:00,864] Register - Step 03: Enter to lastName textbox with data is 'le9688 '
+[2023-04-06 16:40:00,997] Register - Step 04: Enter to email invalid textbox with data is ' kimle6177@gmail.com'
+[2023-04-06 16:40:01,147] Register - Step 05: Enter to password textbox with data is '123123 '
+[2023-04-06 16:40:01,267] Register - Step 06: Enter to confirm password textbox with data is '123456'
+[2023-04-06 16:40:01,386] Register - Step 07: Click to register button
+[2023-04-06 16:40:01,464] Register - Step 08: Verify assword and confirmation password don't match

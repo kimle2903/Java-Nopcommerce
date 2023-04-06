@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="tests" name="Nopcommerce" thread-count="1">
+
+	<!-- 
+
+		<listener class-name="reportConfigs.MethodListener" />
+-->
+	<listeners>
+		<listener class-name="reportConfigs.ExtentTestListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+
+	</listeners>
+
+	<parameter name="envServer" value="dev" />
+	<parameter name="envName" value="local" />
+	<test name="Run with Chrome Browser">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.nopcommerce.user.Register" />
+		</classes>
+	</test>
+
+
+</suite>
