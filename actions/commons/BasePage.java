@@ -18,6 +18,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.user.UserListProductPageObject;
+import pageUIs.user.UserBasePageUI;
+import pageUIs.user.UserHomePageUI;
+
 public class BasePage {
 	WebDriver driver;
 
@@ -41,7 +45,7 @@ public class BasePage {
 		return driver.getPageSource();
 	}
 
-	protected void backToPage() {
+	public void backToPage() {
 		driver.navigate().back();
 	}
 
@@ -49,7 +53,7 @@ public class BasePage {
 		driver.navigate().forward();
 	}
 
-	protected void refreshToPage() {
+	public void refreshToPage() {
 		driver.navigate().refresh();
 	}
 
@@ -239,6 +243,13 @@ public class BasePage {
 		}
 	}
 
+	protected void checkToDefaultCheckboxRadio(String locatorType, String... dynamicValues) {
+		WebElement element = getWebElement(getDynamicByXpath(locatorType, dynamicValues));
+		if (!element.isSelected()) {
+			element.click();
+		}
+	}
+
 	protected void checkToDefaultCheckboxRadio(String locatorType) {
 		WebElement element = getWebElement(locatorType);
 		if (!element.isSelected()) {
@@ -250,6 +261,15 @@ public class BasePage {
 		WebElement element = getWebElement(locatorType);
 		if (element.isSelected()) {
 			element.click();
+		}
+	}
+
+	protected void unCheckToListDefaultCheckbox(String locatorType) {
+		List<WebElement> elements = getListWebElement(locatorType);
+		for (WebElement webElement : elements) {
+			if (webElement.isSelected()) {
+				webElement.click();
+			}
 		}
 	}
 
@@ -286,6 +306,19 @@ public class BasePage {
 		return false;
 	}
 
+	protected Boolean isElementUndisplay(String locatorType, String... dynamicValues) {
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.SHORT_TIMEOUT, TimeUnit.SECONDS);
+		List<WebElement> elements = getListWebElement(getDynamicByXpath(locatorType, dynamicValues));
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+
+		if (elements.size() == 0) {
+			return true;
+		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+			return true;
+		}
+		return false;
+	}
+
 	protected void switchToFrameIFrame(String locatorType) {
 		driver.switchTo().frame(getWebElement(locatorType));
 	}
@@ -296,6 +329,10 @@ public class BasePage {
 
 	protected void hoverMouseToElement(String locatorType) {
 		new Actions(driver).moveToElement(getWebElement(locatorType)).perform();
+	}
+
+	protected void hoverMouseToElement(String locatorType, String... dynamicValues) {
+		new Actions(driver).moveToElement(getWebElement(getDynamicByXpath(locatorType, dynamicValues))).perform();
 	}
 
 	public void pressingByKey(Keys key) {
@@ -434,7 +471,7 @@ public class BasePage {
 
 	protected void waitForElementInVisible(String locatorType, String... dynamicValues) {
 		try {
-			WebDriverWait explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+			WebDriverWait explicitWait = new WebDriverWait(driver, GlobalConstants.SHORT_TIMEOUT);
 			explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(getDynamicByXpath(locatorType, dynamicValues))));
 		} catch (Exception e) {
 			e.getMessage();
@@ -498,6 +535,28 @@ public class BasePage {
 
 		fullFileName = fullFileName.trim();
 		sendKeyToElement(locatorType, fullFileName);
+	}
+
+	public void openPageByNameAtSizeBar(String pageName) {
+		waitForElementClickable(UserBasePageUI.PAGE_NAME_LINK, pageName);
+		clickToElement(UserBasePageUI.PAGE_NAME_LINK, pageName);
+	}
+
+	public void openPageByNameAtFooter(String footerName) {
+		waitForElementClickable(UserBasePageUI.FOOTER_NAME_LINK, footerName);
+		clickToElement(UserBasePageUI.FOOTER_NAME_LINK, footerName);
+	}
+
+	public void hoverToMenuLinkByName(String menuName) {
+		waitForElementVisible(UserHomePageUI.MENU_LINK_BY_NAME, menuName);
+		hoverMouseToElement(UserHomePageUI.MENU_LINK_BY_NAME, menuName);
+	}
+
+	public UserListProductPageObject clickToSubMenuLinkByName(String subMenuName) {
+		waitForElementClickable(UserHomePageUI.SUB_MENU_LINK_BY_NAME, subMenuName);
+		clickToElement(UserHomePageUI.SUB_MENU_LINK_BY_NAME, subMenuName);
+
+		return PageGeneratorManager.getUserListProductPO(driver);
 	}
 
 	public void sleepInSecond(long time) {

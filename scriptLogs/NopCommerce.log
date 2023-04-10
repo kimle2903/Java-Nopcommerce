@@ -382,3 +382,11 @@
 [2023-04-06 16:54:22,985] Register - Step 06: Enter to confirm password textbox with data is '123456'
 [2023-04-06 16:54:23,185] Register - Step 07: Click to register button
 [2023-04-06 16:54:23,337] Register - Step 08: Verify assword and confirmation password don't match
+[2023-04-07 17:00:57,390] no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.49)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'MACs-MacBook-Pro-2.local', ip: 'fe80:0:0:0:c3c:7e5b:5126:7408%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6.3', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.49, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: /var/folders/4x/k23ytk8s67j...}, goog:chromeOptions: {debuggerAddress: localhost:62650}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5207b9be4e00888d0e324d48caa7a799

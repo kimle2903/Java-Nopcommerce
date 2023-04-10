@@ -24,8 +24,9 @@ public class Common_01_Register_With_Email_And_Password extends BaseTest {
 	private UserRegisterPageObject userRegisterPage;
 
 	private WebDriver driver;
-	private String firstName, lastName, confirmPassword;
-	public static String email, password;
+	private String confirmPassword;
+	public static String email, password, firstName, lastName;
+	public String browserName;
 
 	@Parameters({ "envName", "envServer", "osName", "osVersion", "browser" })
 	@BeforeClass
@@ -38,34 +39,35 @@ public class Common_01_Register_With_Email_And_Password extends BaseTest {
 		email = "kimle" + randomInt() + "@gmail.com";
 		password = "123123";
 		confirmPassword = "123123";
+		this.browserName = browserName.toUpperCase();
 	}
 
 	@Test
 	public void Register_Success_With_Email_And_Password(Method method) {
-		ExtentTestManager.startTest(method.getName(), "Register to system success");
+		ExtentTestManager.startTest(method.getName(), browserName + "Register to system success");
 		ExtentTestManager.getTest().log(Status.INFO, "Register - Step 01: Click to register link");
 		userRegisterPage = userHomePage.clickToRegisterLink();
 		sleepInSecond(2);
 
-		ExtentTestManager.getTest().log(Status.INFO, "Register - Step 02: Enter to firstName textbox with data is '" + firstName + " '");
+		ExtentTestManager.getTest().log(Status.INFO, browserName + "- Register - Step 02: Enter to firstName textbox with data is '" + firstName + " '");
 		userRegisterPage.enterToFirstNameTextBox(firstName);
 
-		ExtentTestManager.getTest().log(Status.INFO, "Register - Step 03: Enter to lastName textbox with data is '" + lastName + " '");
+		ExtentTestManager.getTest().log(Status.INFO, browserName + "- Register - Step 03: Enter to lastName textbox with data is '" + lastName + " '");
 		userRegisterPage.enterToLastNameTextBox(lastName);
 
-		ExtentTestManager.getTest().log(Status.INFO, "Register - Step 04: Enter to email invalid textbox with data is ' " + email + "' ");
+		ExtentTestManager.getTest().log(Status.INFO, browserName + "- Register - Step 04: Enter to email invalid textbox with data is ' " + email + "' ");
 		userRegisterPage.enterToEmailTextBox(email);
 
-		ExtentTestManager.getTest().log(Status.INFO, "Register - Step 05: Enter to password textbox with data is '" + password + " '");
+		ExtentTestManager.getTest().log(Status.INFO, browserName + "- Register - Step 05: Enter to password textbox with data is '" + password + " '");
 		userRegisterPage.enterToPasswordTextBox(password);
 
-		ExtentTestManager.getTest().log(Status.INFO, "Register - Step 06: Enter to confirm password textbox with data is '" + confirmPassword + " '");
+		ExtentTestManager.getTest().log(Status.INFO, browserName + "- Register - Step 06: Enter to confirm password textbox with data is '" + confirmPassword + " '");
 		userRegisterPage.enterToConfirmPasswordTextBox(confirmPassword);
 
-		ExtentTestManager.getTest().log(Status.INFO, "Register - Step 07: Click to register button");
+		ExtentTestManager.getTest().log(Status.INFO, browserName + "- Register - Step 07: Click to register button");
 		userRegisterPage.clickToRegisterButton();
 
-		ExtentTestManager.getTest().log(Status.INFO, "Register - Step 08: Verify register success");
+		ExtentTestManager.getTest().log(Status.INFO, browserName + "- Register - Step 08: Verify register success");
 		Assert.assertEquals(userRegisterPage.getMessageRegisterSuccess(), "Your registration completed");
 	}
 

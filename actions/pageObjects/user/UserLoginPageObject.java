@@ -3,6 +3,7 @@ package pageObjects.user;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
+import commons.PageGeneratorManager;
 import pageUIs.user.UserLoginPageUI;
 
 public class UserLoginPageObject extends BasePage {
@@ -46,6 +47,13 @@ public class UserLoginPageObject extends BasePage {
 	public boolean isMyAccountLinkDisplay() {
 		waitForElementVisible(UserLoginPageUI.MY_ACCOUNT_LINK);
 		return isElementDisplay(UserLoginPageUI.MY_ACCOUNT_LINK);
+	}
+
+	public UserCustomerInfoPageObject clickToMyAccountLink() {
+		waitForElementClickable(UserLoginPageUI.MY_ACCOUNT_LINK);
+		clickToElement(UserLoginPageUI.MY_ACCOUNT_LINK);
+
+		return PageGeneratorManager.getUserCustomerInfoPO(driver);
 	}
 
 }

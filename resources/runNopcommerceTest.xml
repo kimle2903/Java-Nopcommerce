@@ -14,25 +14,12 @@
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.nopcommerce.commons.Common_01_Register_With_Email_And_Password" />
-			<class name="com.nopcommerce.user.Login" />
+			<class name="com.nopcommerce.user.Order_01_Add_Edit_Remote_Product_In_Cart" />
+			<class name="com.nopcommerce.user.Order_02_Handle_CheckOut_Cart" />
 		</classes>
 	</test>
 
-	<test name="Run with Edge Browser">
-		<parameter name="browser" value="edge" />
-		<classes>
-			<class name="com.nopcommerce.commons.Common_01_Register_With_Email_And_Password" />
-			<class name="com.nopcommerce.user.Login" />
-		</classes>
-	</test>
-
-	<test name="Run with Safari Browser">
-		<parameter name="browser" value="safari" />
-		<classes>
-			<class name="com.nopcommerce.commons.Common_01_Register_With_Email_And_Password" />
-			<class name="com.nopcommerce.user.Login" />
-		</classes>
-	</test>
+	
 
 
 </suite>
