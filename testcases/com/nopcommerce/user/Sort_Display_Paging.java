@@ -32,14 +32,15 @@ public class Sort_Display_Paging extends BaseTest {
 	List<Float> listPrice;
 	List<Float> sortListPrice;
 
-	@Parameters({ "envName", "envServer", "osName", "osVersion", "browser" })
+	@Parameters({ "envName", "envServer", "osName", "osVersion", "browser", "role" })
 	@BeforeClass
-	public void beforeClass(@Optional("local") String envName, @Optional("staging") String envServer, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("chrome") String browserName) {
+	public void beforeClass(@Optional("local") String envName, @Optional("staging") String envServer, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("chrome") String browserName,
+			@Optional("user") String role) {
+		driver = getBrowserDriver(envName, envServer, osName, osVersion, browserName, role);
+
 		this.browserName = browserName.toUpperCase();
 		menuName = "Computers";
 		subMenuName = "Notebooks";
-
-		driver = getBrowserDriver(envName, envServer, osName, osVersion, browserName);
 		userHomePage = PageGeneratorManager.getUserHomePO(driver);
 
 	}

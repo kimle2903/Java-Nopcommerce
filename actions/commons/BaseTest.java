@@ -26,7 +26,7 @@ public class BaseTest {
 		return this.driver;
 	}
 
-	protected WebDriver getBrowserDriver(String envName, String envServer, String osName, String osVersion, String browserName) {
+	protected WebDriver getBrowserDriver(String envName, String envServer, String osName, String osVersion, String browserName, String role) {
 		switch (envName) {
 		case "local":
 			driver = new LocalFactory(browserName).createDriver();
@@ -40,25 +40,39 @@ public class BaseTest {
 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		driver.get(gerUrlEnvironmentName(envServer));
+		driver.get(gerUrlEnvironmentName(envServer, role));
 
 		return driver;
 	}
 
-	private String gerUrlEnvironmentName(String environmentName) {
+	private String gerUrlEnvironmentName(String environmentName, String role) {
 		String url;
 		EnvironmentList enviroment = EnvironmentList.valueOf(environmentName.toUpperCase());
 
-		switch (enviroment) {
-		case DEV:
-			url = GlobalConstants.USER_PAGE_URL;
-			break;
-		case STAGING:
-			url = GlobalConstants.USER_PAGE_URL;
-			break;
-		default:
-			url = null;
+		if (role.equals("user")) {
+			switch (enviroment) {
+			case DEV:
+				url = GlobalConstants.USER_PAGE_URL;
+				break;
+			case STAGING:
+				url = GlobalConstants.USER_PAGE_URL;
+				break;
+			default:
+				url = null;
+			}
+		} else {
+			switch (enviroment) {
+			case DEV:
+				url = GlobalConstants.ADMIN_PAGE_URL;
+				break;
+			case STAGING:
+				url = GlobalConstants.ADMIN_PAGE_URL;
+				break;
+			default:
+				url = null;
+			}
 		}
+
 		return url;
 	}
 

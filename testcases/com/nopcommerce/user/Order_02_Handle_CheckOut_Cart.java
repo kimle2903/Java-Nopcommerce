@@ -8,7 +8,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nopcommerce.commons.Common_01_Register_With_Email_And_Password;
+import com.nopcommerce.commons.Common_01_User_Register_With_Email_And_Password;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -37,10 +37,10 @@ public class Order_02_Handle_CheckOut_Cart extends BaseTest {
 	private String menuName, subMenuName, productName, productPrice, quantity, feeShipping, feeTax;
 	private String country, countryName, province, postalCode, city, addressOne, addressUpdate, phoneNumber, shippingMethod, shippingMethodUpdate, nameMethodShipping, paymentMethod, orderNumber;
 
-	@Parameters({ "envName", "envServer", "osName", "osVersion", "browser" })
-
+	@Parameters({ "envName", "envServer", "osName", "osVersion", "browser", "role" })
 	@BeforeClass
-	public void beforeClass(@Optional("local") String envName, @Optional("staging") String envServer, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("chrome") String browserName) {
+	public void beforeClass(@Optional("local") String envName, @Optional("staging") String envServer, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("chrome") String browserName,
+			@Optional("user") String role) {
 		menuName = "Computers";
 		subMenuName = "Desktops";
 		productName = "Lenovo IdeaCentre 600 All-in-One PC";
@@ -59,12 +59,12 @@ public class Order_02_Handle_CheckOut_Cart extends BaseTest {
 		nameMethodShipping = "Ground";
 		paymentMethod = "Check / Money Order";
 
-		driver = getBrowserDriver(envName, envServer, osName, osVersion, browserName);
+		driver = getBrowserDriver(envName, envServer, osName, osVersion, browserName, role);
 		userHomePage = PageGeneratorManager.getUserHomePO(driver);
 
 		userLoginPage = userHomePage.clickToLoginLink();
-		userLoginPage.enterToEmailTextBox(Common_01_Register_With_Email_And_Password.email);
-		userLoginPage.enterToPasswordTextBox(Common_01_Register_With_Email_And_Password.password);
+		userLoginPage.enterToEmailTextBox(Common_01_User_Register_With_Email_And_Password.email);
+		userLoginPage.enterToPasswordTextBox(Common_01_User_Register_With_Email_And_Password.password);
 		userLoginPage.clickToLoginButton();
 
 		userLoginPage.hoverToMenuLinkByName(menuName);
@@ -112,16 +112,16 @@ public class Order_02_Handle_CheckOut_Cart extends BaseTest {
 		Assert.assertTrue(userCheckoutProductPage.isPaymentInfoDisplay());
 		userCheckoutProductPage.clickToContinueButtonInPaymentInfo();
 
-		Assert.assertEquals(userCheckoutProductPage.getNameInBillingInfo(), Common_01_Register_With_Email_And_Password.firstName + " " + Common_01_Register_With_Email_And_Password.lastName);
-		Assert.assertEquals(userCheckoutProductPage.getEmailInBillingInfo(), "Email: " + Common_01_Register_With_Email_And_Password.email);
+		Assert.assertEquals(userCheckoutProductPage.getNameInBillingInfo(), Common_01_User_Register_With_Email_And_Password.firstName + " " + Common_01_User_Register_With_Email_And_Password.lastName);
+		Assert.assertEquals(userCheckoutProductPage.getEmailInBillingInfo(), "Email: " + Common_01_User_Register_With_Email_And_Password.email);
 		Assert.assertEquals(userCheckoutProductPage.getPhoneInBillingInfo(), "Phone: " + phoneNumber);
 		Assert.assertEquals(userCheckoutProductPage.getAddressOneInBillingInfo(), addressOne);
 		Assert.assertEquals(userCheckoutProductPage.getCityStateInBillingInfo(), city + "," + province + "," + postalCode);
 		Assert.assertEquals(userCheckoutProductPage.getCountryInBillingInfo(), countryName);
 		Assert.assertEquals(userCheckoutProductPage.getPaymentMethodInBillingInfo(), paymentMethod);
 
-		Assert.assertEquals(userCheckoutProductPage.getNameInShippingInfo(), Common_01_Register_With_Email_And_Password.firstName + " " + Common_01_Register_With_Email_And_Password.lastName);
-		Assert.assertEquals(userCheckoutProductPage.getEmailInShippingInfo(), "Email: " + Common_01_Register_With_Email_And_Password.email);
+		Assert.assertEquals(userCheckoutProductPage.getNameInShippingInfo(), Common_01_User_Register_With_Email_And_Password.firstName + " " + Common_01_User_Register_With_Email_And_Password.lastName);
+		Assert.assertEquals(userCheckoutProductPage.getEmailInShippingInfo(), "Email: " + Common_01_User_Register_With_Email_And_Password.email);
 		Assert.assertEquals(userCheckoutProductPage.getPhoneInShippingInfo(), "Phone: " + phoneNumber);
 		Assert.assertEquals(userCheckoutProductPage.getAddressOneInShippingInfo(), addressOne);
 		Assert.assertEquals(userCheckoutProductPage.getCityStateInShippingInfo(), city + "," + province + "," + postalCode);
@@ -157,16 +157,16 @@ public class Order_02_Handle_CheckOut_Cart extends BaseTest {
 		userOrderDetailPage = userOrderPO.clickToDetailLink();
 		Assert.assertEquals(userOrderDetailPage.getOrderTotal(), productPrice);
 
-		Assert.assertEquals(userOrderDetailPage.getNameInBillingInfo(), Common_01_Register_With_Email_And_Password.firstName + " " + Common_01_Register_With_Email_And_Password.lastName);
-		Assert.assertEquals(userOrderDetailPage.getEmailInBillingInfo(), "Email: " + Common_01_Register_With_Email_And_Password.email);
+		Assert.assertEquals(userOrderDetailPage.getNameInBillingInfo(), Common_01_User_Register_With_Email_And_Password.firstName + " " + Common_01_User_Register_With_Email_And_Password.lastName);
+		Assert.assertEquals(userOrderDetailPage.getEmailInBillingInfo(), "Email: " + Common_01_User_Register_With_Email_And_Password.email);
 		Assert.assertEquals(userOrderDetailPage.getPhoneInBillingInfo(), "Phone: " + phoneNumber);
 		Assert.assertEquals(userOrderDetailPage.getAddressOneInBillingInfo(), addressOne);
 		Assert.assertEquals(userOrderDetailPage.getCityStateInBillingInfo(), city + "," + province + "," + postalCode);
 		Assert.assertEquals(userOrderDetailPage.getCountryInBillingInfo(), countryName);
 		Assert.assertEquals(userOrderDetailPage.getPaymentMethodInBillingInfo(), paymentMethod);
 
-		Assert.assertEquals(userOrderDetailPage.getNameInShippingInfo(), Common_01_Register_With_Email_And_Password.firstName + " " + Common_01_Register_With_Email_And_Password.lastName);
-		Assert.assertEquals(userOrderDetailPage.getEmailInShippingInfo(), "Email: " + Common_01_Register_With_Email_And_Password.email);
+		Assert.assertEquals(userOrderDetailPage.getNameInShippingInfo(), Common_01_User_Register_With_Email_And_Password.firstName + " " + Common_01_User_Register_With_Email_And_Password.lastName);
+		Assert.assertEquals(userOrderDetailPage.getEmailInShippingInfo(), "Email: " + Common_01_User_Register_With_Email_And_Password.email);
 		Assert.assertEquals(userOrderDetailPage.getPhoneInShippingInfo(), "Phone: " + phoneNumber);
 		Assert.assertEquals(userOrderDetailPage.getAddressOneInShippingInfo(), addressOne);
 		Assert.assertEquals(userOrderDetailPage.getCityStateInShippingInfo(), city + "," + province + "," + postalCode);

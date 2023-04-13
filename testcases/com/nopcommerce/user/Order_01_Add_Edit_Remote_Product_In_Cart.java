@@ -8,7 +8,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nopcommerce.commons.Common_01_Register_With_Email_And_Password;
+import com.nopcommerce.commons.Common_01_User_Register_With_Email_And_Password;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -32,10 +32,11 @@ public class Order_01_Add_Edit_Remote_Product_In_Cart extends BaseTest {
 	private String software[] = { "Microsoft Office [+$50.00]", "Acrobat Reader [+$10.00]" };
 	private String softwareUpdate[] = { "Microsoft Office [+$50.00]" };
 
-	@Parameters({ "envName", "envServer", "osName", "osVersion", "browser" })
-
+	@Parameters({ "envName", "envServer", "osName", "osVersion", "browser", "role" })
 	@BeforeClass
-	public void beforeClass(@Optional("local") String envName, @Optional("staging") String envServer, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("chrome") String browserName) {
+	public void beforeClass(@Optional("local") String envName, @Optional("staging") String envServer, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("chrome") String browserName,
+			@Optional("user") String role) {
+
 		menuName = "Computers";
 		subMenuName = "Desktops";
 		productName = "Build your own computer";
@@ -52,12 +53,12 @@ public class Order_01_Add_Edit_Remote_Product_In_Cart extends BaseTest {
 		osUpdate = "Vista Premium [+$60.00]";
 		totalPriceUpdate = "$1,385.00";
 
-		driver = getBrowserDriver(envName, envServer, osName, osVersion, browserName);
+		driver = getBrowserDriver(envName, envServer, osName, osVersion, browserName, role);
 		userHomePage = PageGeneratorManager.getUserHomePO(driver);
 
 		userLoginPage = userHomePage.clickToLoginLink();
-		userLoginPage.enterToEmailTextBox(Common_01_Register_With_Email_And_Password.email);
-		userLoginPage.enterToPasswordTextBox(Common_01_Register_With_Email_And_Password.password);
+		userLoginPage.enterToEmailTextBox(Common_01_User_Register_With_Email_And_Password.email);
+		userLoginPage.enterToPasswordTextBox(Common_01_User_Register_With_Email_And_Password.password);
 		userLoginPage.clickToLoginButton();
 
 		userLoginPage.hoverToMenuLinkByName(menuName);

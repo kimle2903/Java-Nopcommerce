@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="tests" name="Nopcommerce" thread-count="1">
+
+	<listeners>
+		<listener class-name="reportConfigs.ExtentTestListener" />
+		<listener class-name="reportConfigs.MethodListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+	</listeners>
+
+	<parameter name="envServer" value="dev" />
+	<parameter name="envName" value="local" />
+	<parameter name="role" value="user" />
+	<test name="Run with Chrome Browser">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.nopcommerce.commons.Common_01_User_Register_With_Email_And_Password" />
+			<class name="com.nopcommerce.user.Order_01_Add_Edit_Remote_Product_In_Cart" />
+			<class name="com.nopcommerce.user.Order_02_Handle_CheckOut_Cart" />
+		</classes>
+	</test>
+
+
+</suite>

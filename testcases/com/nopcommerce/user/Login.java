@@ -11,7 +11,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
-import com.nopcommerce.commons.Common_01_Register_With_Email_And_Password;
+import com.nopcommerce.commons.Common_01_User_Register_With_Email_And_Password;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -26,10 +26,11 @@ public class Login extends BaseTest {
 	private UserLoginPageObject userLoginPage;
 	private String invalidEmail, emailUnRegister, incorrectPassword;
 
-	@Parameters({ "envName", "envServer", "osName", "osVersion", "browser" })
+	@Parameters({ "envName", "envServer", "osName", "osVersion", "browser", "role" })
 	@BeforeClass
-	public void beforeClass(@Optional("local") String envName, @Optional("staging") String envServer, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("chrome") String browserName) {
-		driver = getBrowserDriver(envName, envServer, osName, osVersion, browserName);
+	public void beforeClass(@Optional("local") String envName, @Optional("staging") String envServer, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("chrome") String browserName,
+			@Optional("user") String role) {
+		driver = getBrowserDriver(envName, envServer, osName, osVersion, browserName, role);
 		userHomePage = PageGeneratorManager.getUserHomePO(driver);
 
 		invalidEmail = "1234@3#$";
@@ -59,8 +60,8 @@ public class Login extends BaseTest {
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Enter to email textbox with data '" + invalidEmail + "'");
 		userLoginPage.enterToEmailTextBox(invalidEmail);
 
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Enter to password textbox with data '" + Common_01_Register_With_Email_And_Password.password + "'");
-		userLoginPage.enterToPasswordTextBox(Common_01_Register_With_Email_And_Password.password);
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Enter to password textbox with data '" + Common_01_User_Register_With_Email_And_Password.password + "'");
+		userLoginPage.enterToPasswordTextBox(Common_01_User_Register_With_Email_And_Password.password);
 
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 04: Click to login button");
 		userLoginPage.clickToLoginButton();
@@ -78,8 +79,8 @@ public class Login extends BaseTest {
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Enter to email textbox with data '" + emailUnRegister + "'");
 		userLoginPage.enterToEmailTextBox(emailUnRegister);
 
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Enter to password textbox with data '" + Common_01_Register_With_Email_And_Password.password + "'");
-		userLoginPage.enterToPasswordTextBox(Common_01_Register_With_Email_And_Password.password);
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Enter to password textbox with data '" + Common_01_User_Register_With_Email_And_Password.password + "'");
+		userLoginPage.enterToPasswordTextBox(Common_01_User_Register_With_Email_And_Password.password);
 
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 04: Click to login button");
 		userLoginPage.clickToLoginButton();
@@ -94,8 +95,8 @@ public class Login extends BaseTest {
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 01: Click to login link");
 		userLoginPage.clickToLoginLink();
 
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Enter to email textbox with data '" + Common_01_Register_With_Email_And_Password.email + "'");
-		userLoginPage.enterToEmailTextBox(Common_01_Register_With_Email_And_Password.email);
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Enter to email textbox with data '" + Common_01_User_Register_With_Email_And_Password.email + "'");
+		userLoginPage.enterToEmailTextBox(Common_01_User_Register_With_Email_And_Password.email);
 
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Click to login button");
 		userLoginPage.clickToLoginButton();
@@ -110,8 +111,8 @@ public class Login extends BaseTest {
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 01: Click to login link");
 		userLoginPage.clickToLoginLink();
 
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Enter to email textbox with data '" + Common_01_Register_With_Email_And_Password.email + "'");
-		userLoginPage.enterToEmailTextBox(Common_01_Register_With_Email_And_Password.email);
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Enter to email textbox with data '" + Common_01_User_Register_With_Email_And_Password.email + "'");
+		userLoginPage.enterToEmailTextBox(Common_01_User_Register_With_Email_And_Password.email);
 
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Enter to password textbox with data '" + incorrectPassword + "'");
 		userLoginPage.enterToPasswordTextBox(incorrectPassword);
@@ -129,11 +130,11 @@ public class Login extends BaseTest {
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 01: Click to login link");
 		userLoginPage.clickToLoginLink();
 
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Enter to email textbox with data '" + Common_01_Register_With_Email_And_Password.email + "'");
-		userLoginPage.enterToEmailTextBox(Common_01_Register_With_Email_And_Password.email);
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Enter to email textbox with data '" + Common_01_User_Register_With_Email_And_Password.email + "'");
+		userLoginPage.enterToEmailTextBox(Common_01_User_Register_With_Email_And_Password.email);
 
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Enter to password textbox with data '" + Common_01_Register_With_Email_And_Password.password + "'");
-		userLoginPage.enterToPasswordTextBox(Common_01_Register_With_Email_And_Password.password);
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Enter to password textbox with data '" + Common_01_User_Register_With_Email_And_Password.password + "'");
+		userLoginPage.enterToPasswordTextBox(Common_01_User_Register_With_Email_And_Password.password);
 
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 04: Click to login button");
 		userLoginPage.clickToLoginButton();

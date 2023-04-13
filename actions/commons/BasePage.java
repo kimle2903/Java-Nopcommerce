@@ -19,6 +19,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageObjects.user.UserListProductPageObject;
+import pageUIs.admin.AdminBasePageUI;
 import pageUIs.user.UserBasePageUI;
 import pageUIs.user.UserHomePageUI;
 
@@ -232,12 +233,11 @@ public class BasePage {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 
 		List<WebElement> allItem = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocator(childXpath)));
-
 		for (WebElement webElement : allItem) {
 			if (webElement.getText().trim().equals(expectedTextItem)) {
 				jsExecutor.executeScript("arguments[0].scrollIntoView();", webElement);
 				sleepInSecond(1);
-				webElement.click();
+				jsExecutor.executeScript("arguments[0].click();", webElement);
 				break;
 			}
 		}
@@ -366,6 +366,11 @@ public class BasePage {
 	protected void scrollToElement(String locatorType) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", getWebElement(locatorType));
+	}
+
+	protected void scrollToElement(String locatorType, String... dynamicValues) {
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", getWebElement(getDynamicByXpath(locatorType, dynamicValues)));
 	}
 
 	protected void removeAttributeInDOM(String locatorType, String attributeRemove) {
@@ -557,6 +562,16 @@ public class BasePage {
 		clickToElement(UserHomePageUI.SUB_MENU_LINK_BY_NAME, subMenuName);
 
 		return PageGeneratorManager.getUserListProductPO(driver);
+	}
+
+	public void clickToMenuByNameInAdmin(String menuName) {
+		waitForElementClickable(AdminBasePageUI.MENU_BY_NAME, menuName);
+		clickToElement(AdminBasePageUI.MENU_BY_NAME, menuName);
+	}
+
+	public void clickToSubMenuByNameInAdmin(String subMenuName) {
+		waitForElementClickable(AdminBasePageUI.SUB_MENU_BY_NAME, subMenuName);
+		clickToElement(AdminBasePageUI.SUB_MENU_BY_NAME, subMenuName);
 	}
 
 	public void sleepInSecond(long time) {

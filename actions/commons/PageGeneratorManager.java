@@ -2,6 +2,12 @@ package commons;
 
 import org.openqa.selenium.WebDriver;
 
+import pageObjects.admin.AdminCustomerPageObject;
+import pageObjects.admin.AdminLoginPageObject;
+import pageObjects.admin.AdminNewAddressPageObject;
+import pageObjects.admin.AdminProductDetailPageObject;
+import pageObjects.admin.AdminProductPageObject;
+import pageObjects.admin.DashboardPageObject;
 import pageObjects.user.UserAddressPageObject;
 import pageObjects.user.UserChangePasswordPageObject;
 import pageObjects.user.UserCheckoutProductPageObject;
@@ -92,5 +98,29 @@ public class PageGeneratorManager {
 
 	public static UserOrderDetailPageObject getUserOrderDetailPO(WebDriver driver) {
 		return new UserOrderDetailPageObject(driver);
+	}
+
+	public static AdminLoginPageObject getAdminLoginPage(WebDriver driver) {
+		return new AdminLoginPageObject(driver);
+	}
+
+	public static DashboardPageObject getDashboardPage(WebDriver driver) {
+		return new DashboardPageObject(driver);
+	}
+
+	public static AdminProductPageObject getAdminProductPage(WebDriver driver) {
+		return new AdminProductPageObject(driver);
+	}
+
+	public static AdminProductDetailPageObject getAdminProductDetailPage(WebDriver driver) {
+		return new AdminProductDetailPageObject(driver);
+	}
+
+	public static AdminCustomerPageObject getAdminCustomerPO(WebDriver driver) {
+		return new AdminCustomerPageObject(driver);
+	}
+
+	public static AdminNewAddressPageObject getAdminNewAddressPO(WebDriver driver) {
+		return new AdminNewAddressPageObject(driver);
 	}
 }

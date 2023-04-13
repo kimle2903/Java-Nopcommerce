@@ -9,17 +9,15 @@
 	</listeners>
 
 	<parameter name="envServer" value="dev" />
+	<parameter name="role" value="admin" />
 	<parameter name="envName" value="local" />
 	<test name="Run with Chrome Browser">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.nopcommerce.commons.Common_01_Register_With_Email_And_Password" />
-			<class name="com.nopcommerce.user.Order_01_Add_Edit_Remote_Product_In_Cart" />
-			<class name="com.nopcommerce.user.Order_02_Handle_CheckOut_Cart" />
+			<class name="com.nopcommerce.admin.Create_Edit_Delete_Customer" />
+			<class name="com.nopcommerce.admin.Search_Customer" />
 		</classes>
 	</test>
-
-	
 
 
 </suite>

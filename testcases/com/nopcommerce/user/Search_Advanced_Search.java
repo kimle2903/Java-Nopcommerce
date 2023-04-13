@@ -11,7 +11,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
-import com.nopcommerce.commons.Common_01_Register_With_Email_And_Password;
+import com.nopcommerce.commons.Common_01_User_Register_With_Email_And_Password;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -28,10 +28,11 @@ public class Search_Advanced_Search extends BaseTest {
 	private WebDriver driver;
 	private String browserName, footerName, productNameRelative, productNameAbsolute, category, advancedKey;
 
-	@Parameters({ "envName", "envServer", "osName", "osVersion", "browser" })
+	@Parameters({ "envName", "envServer", "osName", "osVersion", "browser", "role" })
 	@BeforeClass
-	public void beforeClass(@Optional("local") String envName, @Optional("staging") String envServer, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("chrome") String browserName) {
-		driver = getBrowserDriver(envName, envServer, osName, osVersion, browserName);
+	public void beforeClass(@Optional("local") String envName, @Optional("staging") String envServer, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("chrome") String browserName,
+			@Optional("user") String role) {
+		driver = getBrowserDriver(envName, envServer, osName, osVersion, browserName, role);
 		userHomePage = PageGeneratorManager.getUserHomePO(driver);
 		this.browserName = browserName.toUpperCase();
 
@@ -42,8 +43,8 @@ public class Search_Advanced_Search extends BaseTest {
 		advancedKey = "Apple MacBook Pro";
 
 		userLoginPage = userHomePage.clickToLoginLink();
-		userLoginPage.enterToEmailTextBox(Common_01_Register_With_Email_And_Password.email);
-		userLoginPage.enterToPasswordTextBox(Common_01_Register_With_Email_And_Password.password);
+		userLoginPage.enterToEmailTextBox(Common_01_User_Register_With_Email_And_Password.email);
+		userLoginPage.enterToPasswordTextBox(Common_01_User_Register_With_Email_And_Password.password);
 		userLoginPage.clickToLoginButton();
 		Assert.assertTrue(userLoginPage.isMyAccountLinkDisplay());
 	}
